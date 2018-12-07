@@ -1,0 +1,11 @@
+/* 
+  L10n.strings
+  RSwiftDemo
+
+  Created by Antonin MOLIERES on 01/12/2018.
+  Copyright © 2018 amolieres. All rights reserved.
+*/
+
+"whereis" = "Where is %@ ?";
+"isinthe" = "%@ is in the %@";
+"kitchen" = "kitchen";

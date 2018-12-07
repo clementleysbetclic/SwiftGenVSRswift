@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  testRSwift
+
+  Created by Antonin MOLIERES on 29/11/2018.
+  Copyright © 2018 amolieres. All rights reserved.
+*/
+"whereIs" = "Where is %@ ?";
+"isInThe" = "%@ is in the %@";
+"kitchen" = "kitchen";

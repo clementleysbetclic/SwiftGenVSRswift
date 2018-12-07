@@ -1,0 +1,29 @@
+input_dir: TestSwiftGen/Resources
+output_dir: TestSwiftGen/Constants/Generated
+
+strings:
+  inputs: en.lproj/Localizable.strings
+  outputs:
+    - templateName: structured-swift4
+      output: Strings.swift
+xcassets:
+  inputs:
+    - Assets.xcassets
+  outputs:
+    - templateName: swift4
+      output: Assets.swift
+fonts:
+  inputs: fonts
+  outputs:
+    templateName: swift4
+    output: Fonts.swift
+ib:
+  inputs: ./
+  outputs:
+    - templateName: segues-swift4
+      output: Segues.swift
+colors:
+  inputs: colors.json
+  outputs:
+    - templateName: swift4
+      output: Colors.swift
