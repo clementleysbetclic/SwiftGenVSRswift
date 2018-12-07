@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChuckNorris" translatesAutoresizingMaskIntoConstraints="NO" id="03B-AJ-2wn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="03B-AJ-2wn">
                                 <rect key="frame" x="50" y="228" width="275" height="275"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -106,7 +106,4 @@
             <point key="canvasLocation" x="-522" y="322"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ChuckNorris" width="700" height="663"/>
-    </resources>
 </document>

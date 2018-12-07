@@ -55,12 +55,12 @@ struct R: Rswift.Validatable {
   
   /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
-    /// Image `ChuckNorrissdsf`.
-    static let chuckNorrissdsf = Rswift.ImageResource(bundle: R.hostingBundle, name: "ChuckNorrissdsf")
+    /// Image `ChuckNorris`.
+    static let chuckNorris = Rswift.ImageResource(bundle: R.hostingBundle, name: "ChuckNorris")
     
-    /// `UIImage(named: "ChuckNorrissdsf", bundle: ..., traitCollection: ...)`
-    static func chuckNorrissdsf(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.chuckNorrissdsf, compatibleWith: traitCollection)
+    /// `UIImage(named: "ChuckNorris", bundle: ..., traitCollection: ...)`
+    static func chuckNorris(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.chuckNorris, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -167,7 +167,7 @@ struct R: Rswift.Validatable {
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      try _R.validate()
+      // There are no resources to validate
     }
     
     fileprivate init() {}
@@ -178,20 +178,12 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R: Rswift.Validatable {
-  static func validate() throws {
-    try storyboard.validate()
-  }
-  
+struct _R {
   struct nib {
     fileprivate init() {}
   }
   
-  struct storyboard: Rswift.Validatable {
-    static func validate() throws {
-      try main.validate()
-    }
-    
+  struct storyboard {
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UIViewController
       
@@ -201,15 +193,11 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+    struct main: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
       let name = "Main"
-      
-      static func validate() throws {
-        if UIKit.UIImage(named: "ChuckNorris") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ChuckNorris' is used in storyboard 'Main', but couldn't be loaded.") }
-      }
       
       fileprivate init() {}
     }
